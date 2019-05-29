@@ -65,7 +65,7 @@ void main() {
       });
     });
 
-     group("#operator [](int index)", () {
+    group("#operator [](int index)", () {
       test("should return a subscription from the list with an index", () {
         subxMap.add('key', subscription);
         expect(subxMap['key'], equals(subscription));
@@ -73,12 +73,15 @@ void main() {
     });
 
     group("#containsSubscription()", () {
-      test("should return true if this list contains the given subscription", () {
+      test("should return true if this list contains the given subscription",
+          () {
         subxMap.add('key', subscription);
         expect(subxMap.containsSubscription(subscription), equals(true));
       });
 
-      test("should return false if this list does not contain the given subscription", () {
+      test(
+          "should return false if this list does not contain the given subscription",
+          () {
         expect(subxMap.containsSubscription(subscription), equals(false));
       });
     });
