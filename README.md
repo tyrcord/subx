@@ -1,5 +1,7 @@
 # SubX
 
+[![Build Status](https://travis-ci.com/tyrcord/subx.svg?branch=master)](https://travis-ci.com/tyrcord/subx)
+
 RxDart Subscriptions management.
 
 Provide Apis to store and manage RxDart subscriptions and provide methods to unsubscribe them all.
