@@ -10,6 +10,15 @@ Provide Apis to store and manage RxDart subscriptions and provide methods to uns
 
 The project has dependencies that require the Dart SDK 2.0
 
+# Contents
+
+- [Changelog](CHANGELOG.md)
+- [SubxList](#subxlist)
+    - [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxList-class.html)
+- [SubxMap](#subxmap)
+    - [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxMap-class.html)
+- [License](#license)
+
 # SubxList
 
 Object that holds and manages a list of Subscriptions.
@@ -36,6 +45,8 @@ subxList.add(subscription2);
 subxList.unsubscribeAll();
 ```
 
+[API Reference](https://pub.dev/documentation/subx/latest/subx/SubxList-class.html)
+
 # SubxMap
 
 Object that holds and manages Key-Subscription pairs.
@@ -61,6 +72,8 @@ subxList.set('key2', subscription2);
 
 subxList.unsubscribeAll();
 ```
+
+[API Reference](https://pub.dev/documentation/subx/latest/subx/SubxMap-class.html)
 
 # License
 Copyright (c) Tyrcord, Inc. Licensed under the ISC License.
