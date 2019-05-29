@@ -3,6 +3,7 @@ version: 0.3.0
 description: RxDart Subscriptions management
 author: Tyrcord Inc. <dev@tyrcord.com>
 homepage: https://github.com/tyrcord/subx
+issue_tracker: https://github.com/tyrcord/subx/issues
 
 environment:
   sdk: ">=2.0.0 <3.0.0"
