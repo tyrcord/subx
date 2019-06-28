@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/tyrcord/subx.svg?branch=master)](https://travis-ci.com/tyrcord/subx)
 
-RxDart Subscriptions management.
+*RxDart Subscriptions management.*
 
 Provide Apis to store and manage RxDart subscriptions and provide methods to unsubscribe them all.
 
@@ -10,16 +10,16 @@ Provide Apis to store and manage RxDart subscriptions and provide methods to uns
 
 The project has dependencies that require the Dart SDK 2.0
 
-# Contents
+## Contents
 
 - [Changelog](CHANGELOG.md)
 - [SubxList](#subxlist)
-    - [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxList-class.html)
+  - [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxList-class.html)
 - [SubxMap](#subxmap)
-    - [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxMap-class.html)
+  - [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxMap-class.html)
 - [License](#license)
 
-# SubxList
+## SubxList
 
 Object that holds and manages a list of Subscriptions.
 
@@ -47,11 +47,9 @@ subxList.unsubscribeAll();
 
 [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxList-class.html)
 
-# SubxMap
+## SubxMap
 
 Object that holds and manages Key-Subscription pairs.
-
-### Usage
 
 ```dart
 import 'dart:async';
@@ -75,7 +73,8 @@ subxList.unsubscribeAll();
 
 [API Reference](https://pub.dev/documentation/subx/latest/subx/SubxMap-class.html)
 
-# License
+## License
+
 Copyright (c) Tyrcord, Inc. Licensed under the ISC License.
 
 See [LICENSE](LICENSE) file in the project root for details.
