@@ -120,5 +120,36 @@ void main() {
         expect(subxMap.length, equals(0));
       });
     });
+
+    group("#pauseAll()", () {
+      test("should pause all subscriptions", () {
+        subxMap.add('key', subscription);
+        subxMap.add('key2', subscription2);
+        expect(subxMap.length, equals(2));
+
+        subxMap.pauseAll();
+
+        expect(subxMap['key'].isPaused, true);
+        expect(subxMap['key2'].isPaused, true);
+      });
+    });
+
+    group("#resumeAll()", () {
+      test("should resume all subscriptions", () {
+        subxMap.add('key', subscription);
+        subxMap.add('key2', subscription2);
+        expect(subxMap.length, equals(2));
+
+        subxMap.pauseAll();
+
+        expect(subxMap['key'].isPaused, true);
+        expect(subxMap['key2'].isPaused, true);
+
+        subxMap.resumeAll();
+
+        expect(subxMap['key'].isPaused, false);
+        expect(subxMap['key2'].isPaused, false);
+      });
+    });
   });
 }

@@ -52,4 +52,28 @@ class SubxList {
       cancelAt(0);
     }
   }
+
+  ///
+  /// Pause all StreamSubscriptions of the list
+  ///
+  /// For example:
+  ///
+  ///     subxList.pauseAll();
+  void pauseAll() {
+    for (var subscription in _subscriptionList) {
+      subscription.pause();
+    }
+  }
+
+  ///
+  /// Resume all StreamSubscriptions of the list
+  ///
+  /// For example:
+  ///
+  ///     subxList.resumeAll();
+  void resumeAll() {
+    for (var subscription in _subscriptionList) {
+      subscription.resume();
+    }
+  }
 }

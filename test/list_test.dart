@@ -80,5 +80,36 @@ void main() {
         expect(subxList.length, equals(0));
       });
     });
+
+    group("#pauseAll()", () {
+      test("should pause all subscriptions", () {
+        subxList.add(subscription);
+        subxList.add(subscription2);
+        expect(subxList.length, equals(2));
+
+        subxList.pauseAll();
+
+        expect(subxList[0].isPaused, true);
+        expect(subxList[1].isPaused, true);
+      });
+    });
+
+    group("#resumeAll()", () {
+      test("should resume all subscriptions", () {
+        subxList.add(subscription);
+        subxList.add(subscription2);
+        expect(subxList.length, equals(2));
+
+        subxList.pauseAll();
+
+        expect(subxList[0].isPaused, true);
+        expect(subxList[1].isPaused, true);
+
+        subxList.resumeAll();
+
+        expect(subxList[0].isPaused, false);
+        expect(subxList[1].isPaused, false);
+      });
+    });
   });
 }

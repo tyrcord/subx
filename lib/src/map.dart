@@ -74,4 +74,28 @@ class SubxMap {
 
     _subscriptionMap.clear();
   }
+
+  ///
+  /// Pause all StreamSubscriptions of the list
+  ///
+  /// For example:
+  ///
+  ///     subxMap.pauseAll();
+  void pauseAll() {
+    _subscriptionMap.forEach((_, subscription) {
+      subscription.pause();
+    });
+  }
+
+  ///
+  /// Resume all StreamSubscriptions of the list
+  ///
+  /// For example:
+  ///
+  ///     subxMap.resumeAll();
+  void resumeAll() {
+    _subscriptionMap.forEach((_, subscription) {
+      subscription.resume();
+    });
+  }
 }
