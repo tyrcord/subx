@@ -32,7 +32,7 @@ class SubxList {
   ///     subxList.cancelAt(0);
   Future<bool> cancelAt(int index) async {
     if (index <= length - 1) {
-      StreamSubscription subscription = _subscriptionList.removeAt(index);
+      final subscription = _subscriptionList.removeAt(index);
       await subscription.cancel();
 
       return true;

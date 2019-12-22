@@ -16,7 +16,7 @@ class SubxMap {
   ///
   ///     subxMap.add('key', observable.listen(...));
   SubxMap add(Object key, StreamSubscription<dynamic> value) {
-    final StreamSubscription oldSubscription = _subscriptionMap[key];
+    final oldSubscription = _subscriptionMap[key];
 
     if (oldSubscription != null && oldSubscription != value) {
       oldSubscription.cancel();
@@ -53,7 +53,7 @@ class SubxMap {
   ///     subxMap.cancelForKey('key');
   Future<bool> cancelForKey(Object key) async {
     if (_subscriptionMap.containsKey(key)) {
-      StreamSubscription subscription = _subscriptionMap.remove(key);
+      final subscription = _subscriptionMap.remove(key);
       await subscription.cancel();
       return true;
     }
