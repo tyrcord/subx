@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.com/tyrcord/subx.svg?branch=master)](https://travis-ci.com/tyrcord/subx)
 
-*RxDart Subscriptions management.*
+_RxDart Subscriptions management._
 
 Provide Apis to store and manage RxDart subscriptions and provide methods to unsubscribe them all.
 
@@ -26,10 +26,8 @@ Object that holds and manages a list of Subscriptions.
 ### Usage
 
 ```dart
-import 'dart:async';
 import 'package:rxdart/rxdart.dart';
 import 'package:subx/subx.dart';
-import "package:test/test.dart";
 
 SubxList subxList = SubxList();
 BehaviorSubject source = BehaviorSubject();
@@ -52,10 +50,8 @@ subxList.unsubscribeAll();
 Object that holds and manages Key-Subscription pairs.
 
 ```dart
-import 'dart:async';
 import 'package:rxdart/rxdart.dart';
 import 'package:subx/subx.dart';
-import "package:test/test.dart";
 
 SubxList subxList = SubxList();
 BehaviorSubject source = BehaviorSubject();
