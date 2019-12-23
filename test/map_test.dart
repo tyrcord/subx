@@ -1,11 +1,11 @@
 import 'dart:async';
-
 import 'package:rxdart/rxdart.dart';
+import 'package:test/test.dart';
+
 import 'package:subx/subx.dart';
-import "package:test/test.dart";
 
 void main() {
-  group("SubxMap", () {
+  group('SubxMap', () {
     SubxMap subxMap;
     BehaviorSubject source;
     StreamSubscription subscription;
@@ -23,23 +23,23 @@ void main() {
       source.close();
     });
 
-    group("#length", () {
-      test("should return the number of tracked subscriptions", () {
+    group('#length', () {
+      test('should return the number of tracked subscriptions', () {
         expect(subxMap.length, equals(0));
         subxMap.add('key', subscription);
         expect(subxMap.length, equals(1));
       });
     });
 
-    group("#add()", () {
-      test("should add a subscription to the list", () {
+    group('#add()', () {
+      test('should add a subscription to the list', () {
         expect(subxMap.length, equals(0));
         subxMap.add('key', subscription);
         expect(subxMap.length, equals(1));
       });
 
       test(
-          "should replace a subscription from the list and cancel it when the key already exist",
+          'should replace a subscription from the list and cancel it when the key already exist',
           () {
         subxMap.add('key', subscription);
         expect(subxMap.length, equals(1));
@@ -49,7 +49,7 @@ void main() {
       });
 
       test(
-          "should not cancel a subscription when the same subscription is added with the same key",
+          'should not cancel a subscription when the same subscription is added with the same key',
           () {
         subxMap.add('key', subscription);
         expect(subxMap.length, equals(1));
@@ -58,59 +58,59 @@ void main() {
         expect(subxMap.length, equals(1));
       });
 
-      test("should allow chaining calls", () {
+      test('should allow chaining calls', () {
         expect(subxMap.length, equals(0));
         subxMap.add('key', subscription)..add('key2', subscription2);
         expect(subxMap.length, equals(2));
       });
     });
 
-    group("#operator [](int index)", () {
-      test("should return a subscription from the list with an index", () {
+    group('#operator [](int index)', () {
+      test('should return a subscription from the list with an index', () {
         subxMap.add('key', subscription);
         expect(subxMap['key'], equals(subscription));
       });
     });
 
-    group("#containsSubscription()", () {
-      test("should return true if this list contains the given subscription",
+    group('#containsSubscription()', () {
+      test('should return true if this list contains the given subscription',
           () {
         subxMap.add('key', subscription);
         expect(subxMap.containsSubscription(subscription), equals(true));
       });
 
       test(
-          "should return false if this list does not contain the given subscription",
+          'should return false if this list does not contain the given subscription',
           () {
         expect(subxMap.containsSubscription(subscription), equals(false));
       });
     });
 
-    group("#cancelAt()", () {
-      test("should cancel a subscription with an index", () async {
+    group('#cancelAt()', () {
+      test('should cancel a subscription with an index', () async {
         subxMap.add('key', subscription);
         subxMap.add('key2', subscription2);
         expect(subxMap.length, equals(2));
 
-        bool unsubscribed = await subxMap.cancelForKey("key");
+        final unsubscribed = await subxMap.cancelForKey('key');
 
         expect(subxMap.length, equals(1));
         expect(unsubscribed, equals(true));
       });
 
-      test("should handle wrong keys", () async {
+      test('should handle wrong keys', () async {
         subxMap.add('key', subscription);
         expect(subxMap.length, equals(1));
 
-        bool unsubscribed = await subxMap.cancelForKey("key2");
+        final unsubscribed = await subxMap.cancelForKey('key2');
 
         expect(subxMap.length, equals(1));
         expect(unsubscribed, equals(false));
       });
     });
 
-    group("#cancelAll()", () {
-      test("should cancel all subscriptions", () {
+    group('#cancelAll()', () {
+      test('should cancel all subscriptions', () {
         subxMap.add('key', subscription);
         subxMap.add('key2', subscription2);
         expect(subxMap.length, equals(2));
@@ -121,8 +121,8 @@ void main() {
       });
     });
 
-    group("#pauseAll()", () {
-      test("should pause all subscriptions", () {
+    group('#pauseAll()', () {
+      test('should pause all subscriptions', () {
         subxMap.add('key', subscription);
         subxMap.add('key2', subscription2);
         expect(subxMap.length, equals(2));
@@ -134,8 +134,8 @@ void main() {
       });
     });
 
-    group("#resumeAll()", () {
-      test("should resume all subscriptions", () {
+    group('#resumeAll()', () {
+      test('should resume all subscriptions', () {
         subxMap.add('key', subscription);
         subxMap.add('key2', subscription2);
         expect(subxMap.length, equals(2));
