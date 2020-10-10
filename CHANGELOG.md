@@ -1,5 +1,10 @@
 # Changelog
 
+## [0.5.0](https://github.com/tyrcord/subx/releases/tag/v0.6.0) (2020-10-10)
+
+- **SubxList:** Add the method `addAll`
+- Requires dart 2.10.0
+
 ## [0.5.0](https://github.com/tyrcord/subx/releases/tag/v0.5.0) (2019-09-23)
 
 - Requires dart 2.6.0
