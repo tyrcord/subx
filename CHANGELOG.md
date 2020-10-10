@@ -16,13 +16,13 @@
 
 - Requires dart 2.10.0
 
-## [0.5.0](https://github.com/tyrcord/subx/releases/tag/v0.5.0) (2019-09-23)
+## [0.5.0](https://github.com/tyrcord/subx/releases/tag/v0.5.0) (2019-12-23)
 
 ### Breaking Changes
 
 - Requires dart 2.6.0
 
-## [0.4.0](https://github.com/tyrcord/subx/releases/tag/v0.4.0) (2019-09-23)
+## [0.4.0](https://github.com/tyrcord/subx/releases/tag/v0.4.0) (2019-09-24)
 
 ### Features
 
