@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:rxdart/rxdart.dart';
 import 'package:test/test.dart';
 
@@ -36,6 +37,14 @@ void main() {
         expect(subxList.length, equals(0));
         subxList.add(subscription);
         expect(subxList.length, equals(1));
+      });
+    });
+
+    group('#addAll()', () {
+      test('should add a list of subscription to the list', () {
+        expect(subxList.length, equals(0));
+        subxList.addAll([subscription, subscription2]);
+        expect(subxList.length, equals(2));
       });
     });
 

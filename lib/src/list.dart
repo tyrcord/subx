@@ -17,6 +17,16 @@ class SubxList {
   void add(StreamSubscription<dynamic> value) => _subscriptionList.add(value);
 
   ///
+  /// Add a list of StreamSubscription to the list
+  ///
+  /// For example:
+  ///
+  ///     subxList.add([observable.listen(...)]);
+  void addAll(Iterable<StreamSubscription<dynamic>> values) {
+    values.forEach((value) => add(value));
+  }
+
+  ///
   /// Return a StreamSubscription from the list with a specified index
   ///
   /// For example:
