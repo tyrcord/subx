@@ -1,6 +1,6 @@
 # Changelog
 
-## [0.6.0](https://github.com/tyrcord/subx/releases/tag/v0.6.0) (2020-10-10)
+## [0.6.0](https://github.com/tyrcord/subx/releases/tag/0.6.0) (2020-10-10)
 
 ### Features
 
