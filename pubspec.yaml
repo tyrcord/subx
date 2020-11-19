@@ -1,5 +1,5 @@
 name: subx
-version: 0.6.1
+version: 0.6.2
 description: >
   RxDart Subscriptions management.
   Provide Apis to store and manage RxDart subscriptions
