@@ -68,7 +68,7 @@ class SubxMap {
   ///
   ///     subxMap.cancelAll();
   void cancelAll() async {
-    _subscriptionMap.forEach((key, subscription) {
+    _subscriptionMap.forEach((key, StreamSubscription<dynamic> subscription) {
       subscription.cancel();
     });
 
@@ -82,7 +82,7 @@ class SubxMap {
   ///
   ///     subxMap.pauseAll();
   void pauseAll() {
-    _subscriptionMap.forEach((_, subscription) {
+    _subscriptionMap.forEach((_, StreamSubscription<dynamic> subscription) {
       subscription.pause();
     });
   }
@@ -94,7 +94,7 @@ class SubxMap {
   ///
   ///     subxMap.resumeAll();
   void resumeAll() {
-    _subscriptionMap.forEach((_, subscription) {
+    _subscriptionMap.forEach((_, StreamSubscription<dynamic> subscription) {
       subscription.resume();
     });
   }

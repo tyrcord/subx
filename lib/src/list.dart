@@ -70,7 +70,7 @@ class SubxList {
   ///
   ///     subxList.pauseAll();
   void pauseAll() {
-    for (var subscription in _subscriptionList) {
+    for (final subscription in _subscriptionList) {
       subscription.pause();
     }
   }
@@ -82,7 +82,7 @@ class SubxList {
   ///
   ///     subxList.resumeAll();
   void resumeAll() {
-    for (var subscription in _subscriptionList) {
+    for (final subscription in _subscriptionList) {
       subscription.resume();
     }
   }
