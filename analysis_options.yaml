@@ -24,7 +24,6 @@ linter:
     - library_prefixes
     - list_remove_unrelated_type
     - non_constant_identifier_names
-    - overridden_fields
     - package_api_docs
     - package_names
     - package_prefixed_library_names
@@ -41,3 +40,4 @@ linter:
     - unnecessary_new
     - unrelated_type_equality_checks
     - valid_regexps
+    - lines_longer_than_80_chars
