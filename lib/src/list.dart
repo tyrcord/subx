@@ -35,7 +35,8 @@ class SubxList {
   StreamSubscription operator [](int index) => _subscriptionList[index];
 
   ///
-  /// Unsubscribe to a StreamSubscription with a specified index and remove it from list
+  /// Unsubscribe to a StreamSubscription with a specified index
+  /// and remove it from list
   ///
   /// For example:
   ///

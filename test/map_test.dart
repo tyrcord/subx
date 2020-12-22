@@ -40,24 +40,28 @@ void main() {
       });
 
       test(
-          'should replace a subscription from the list and cancel it when the key already exist',
-          () {
-        subxMap.add('key', subscription);
-        expect(subxMap.length, equals(1));
+        'should replace a subscription from the list and '
+        'cancel it when the key already exist',
+        () {
+          subxMap.add('key', subscription);
+          expect(subxMap.length, equals(1));
 
-        subxMap.add('key', subscription2);
-        expect(subxMap.length, equals(1));
-      });
+          subxMap.add('key', subscription2);
+          expect(subxMap.length, equals(1));
+        },
+      );
 
       test(
-          'should not cancel a subscription when the same subscription is added with the same key',
-          () {
-        subxMap.add('key', subscription);
-        expect(subxMap.length, equals(1));
+        'should not cancel a subscription when '
+        'the same subscription is added with the same key',
+        () {
+          subxMap.add('key', subscription);
+          expect(subxMap.length, equals(1));
 
-        subxMap.add('key', subscription);
-        expect(subxMap.length, equals(1));
-      });
+          subxMap.add('key', subscription);
+          expect(subxMap.length, equals(1));
+        },
+      );
 
       test('should allow chaining calls', () {
         expect(subxMap.length, equals(0));
@@ -81,10 +85,12 @@ void main() {
       });
 
       test(
-          'should return false if this list does not contain the given subscription',
-          () {
-        expect(subxMap.containsSubscription(subscription), equals(false));
-      });
+        'should return false if this list '
+        'does not contain the given subscription',
+        () {
+          expect(subxMap.containsSubscription(subscription), equals(false));
+        },
+      );
     });
 
     group('#cancelAt()', () {
