@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.7.0](https://github.com/tyrcord/subx/releases/tag/0.7.0) (2021-03-05)
+
+### Enhancements
+
+- Supports sound null safety.
+
 ## [0.6.2](https://github.com/tyrcord/subx/releases/tag/0.6.2) (2020-10-19)
 
 ### Enhancements

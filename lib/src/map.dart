@@ -33,7 +33,7 @@ class SubxMap {
   /// For example:
   ///
   ///     StreamSubscription subscription = subxMap[0];
-  StreamSubscription operator [](Object key) => _subscriptionMap[key];
+  StreamSubscription? operator [](Object key) => _subscriptionMap[key];
 
   ///
   /// Returns a boolean indicating whether an subscription exists or not.
@@ -53,8 +53,9 @@ class SubxMap {
   ///     subxMap.cancelForKey('key');
   Future<bool> cancelForKey(Object key) async {
     if (_subscriptionMap.containsKey(key)) {
-      final subscription = _subscriptionMap.remove(key);
+      final subscription = _subscriptionMap.remove(key)!;
       await subscription.cancel();
+
       return true;
     }
 

@@ -7,10 +7,10 @@ import 'package:subx/subx.dart';
 
 void main() {
   group('SubxMap', () {
-    SubxMap subxMap;
-    BehaviorSubject source;
-    StreamSubscription subscription;
-    StreamSubscription subscription2;
+    late SubxMap subxMap;
+    late BehaviorSubject source;
+    late StreamSubscription subscription;
+    late StreamSubscription subscription2;
 
     setUp(() {
       subxMap = SubxMap();
@@ -65,7 +65,8 @@ void main() {
 
       test('should allow chaining calls', () {
         expect(subxMap.length, equals(0));
-        subxMap.add('key', subscription)..add('key2', subscription2);
+        subxMap.add('key', subscription);
+        subxMap.add('key2', subscription2);
         expect(subxMap.length, equals(2));
       });
     });
@@ -136,8 +137,8 @@ void main() {
 
         subxMap.pauseAll();
 
-        expect(subxMap['key'].isPaused, true);
-        expect(subxMap['key2'].isPaused, true);
+        expect(subxMap['key']!.isPaused, true);
+        expect(subxMap['key2']!.isPaused, true);
       });
     });
 
@@ -149,13 +150,13 @@ void main() {
 
         subxMap.pauseAll();
 
-        expect(subxMap['key'].isPaused, true);
-        expect(subxMap['key2'].isPaused, true);
+        expect(subxMap['key']!.isPaused, true);
+        expect(subxMap['key2']!.isPaused, true);
 
         subxMap.resumeAll();
 
-        expect(subxMap['key'].isPaused, false);
-        expect(subxMap['key2'].isPaused, false);
+        expect(subxMap['key']!.isPaused, false);
+        expect(subxMap['key2']!.isPaused, false);
       });
     });
   });

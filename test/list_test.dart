@@ -7,10 +7,10 @@ import 'package:subx/subx.dart';
 
 void main() {
   group('SubxList', () {
-    SubxList subxList;
-    BehaviorSubject source;
-    StreamSubscription subscription;
-    StreamSubscription subscription2;
+    late SubxList subxList;
+    late BehaviorSubject source;
+    late StreamSubscription subscription;
+    late StreamSubscription subscription2;
 
     setUp(() {
       subxList = SubxList();
