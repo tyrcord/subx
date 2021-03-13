@@ -1,5 +1,8 @@
 import 'dart:async';
 
+///
+/// Class that holds and manages Key-Subscription pairs.
+///
 class SubxList {
   final List<StreamSubscription> _subscriptionList = [];
 

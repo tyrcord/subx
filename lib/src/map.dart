@@ -1,5 +1,8 @@
 import 'dart:async';
 
+///
+/// Class that holds and manages a list of Subscriptions.
+///
 class SubxMap {
   final Map<Object, StreamSubscription> _subscriptionMap = {};
 
