@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.0](https://github.com/tyrcord/subx/releases/tag/1.0.0) (2021-03-24)
+
+- First stable version.
+
 ## [0.7.0](https://github.com/tyrcord/subx/releases/tag/0.7.0) (2021-03-05)
 
 ### Enhancements
